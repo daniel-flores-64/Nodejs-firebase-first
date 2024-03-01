@@ -1,0 +1,41 @@
+<%- include("partials/_header.ejs") %>
+<%- include("partials/_navbar.ejs") %>
+<div class="container">
+  <div class="row breadCrumbHeader text-light mt-5">
+    <div class="col">
+      <h1 class="text-center py-5">INDEX</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container d-flex justify-content-center mt-5">
+  <div class="col-12">
+    <form action="/update/<%= doc.id %>" method="POST">
+
+      <div class="d-flex flex-wrap flex-column align-items-center">
+        <div class="col-6">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" class="form-control" value="<%= doc.name %>" required />
+        </div>
+        <div class="col-6 mt-3">
+          <label for="age">Mobile:</label>
+          <input type="tel" name="mobile" id="age" class="form-control" value="<%= doc.mobile %>" required />
+        </div>
+        <div class="col-6 mt-3">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" class="form-control" value="<%= doc.email %>" required />
+        </div>
+        <div class="col-6 mt-5">
+          <button type="submit" class="btn btn-primary w-100 p-3">Update</button>
+        </div>
+        <div class="col-6 mt-2">
+          <a href="/" class="fw-bold text-light"><i class="bi bi-box-arrow-in-up-left me-2"></i>Back to index</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<%- include("partials/_header.ejs") %>
+<%- include("partials/_navbar.ejs") %>
+<div class="container">
+  <div class="row breadCrumbHeader text-light mt-5">
+    <div class="col">
+      <h1 class="text-center py-5">ADD NEW TASK</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container d-flex justify-content-center mt-5">
+  <div class="col-12">
+    <form method="POST" action="/add-task">
+
+      <div class="d-flex flex-wrap flex-column align-items-center">
+        <div class="col-6 mt-4">
+          <label for="task-title" class="form-label text-white"><span class="formRequiredAst">&#10033;</span> Title:</label>
+          <input type="text" id="task-title" class="form-control" name="title" placeholder="Some title..." required />
+        </div>
+        <div class="col-6 mt-4">
+          <label for="task-description" class="form-label text-white"><span class="formRequiredAst">&#10033;</span> Description:</label>
+          <textarea class="form-control" placeholder="Describe your task here..." id="task-description" name="description" style="height: 100px" required></textarea>
+        </div>
+        <div class="col-6 mt-4">
+          <label for="status" class="form-label text-white"><span class="formRequiredAst">&#10033;</span> Status:</label>
+          <select name="status" id="task-status" class="form-select" required>
+            <option selected class="text-light">Select a status for your task...</option>
+            <option value="true">Pendiente</option>
+            <option value="false">Completada</option>
+          </select>
+        </div>
+        <div class="col-6 mt-4">
+          <label for="task-user" class="form-label text-white"><span class="formRequiredAst">&#10033;</span> Assigned User:</label>
+          <select name="assignedUser" id="task-user" class="form-select" required>
+            <option>Assign a user for this task...</option>
+            <% data.forEach(doc => { %>
+            <option value="<%= doc.id %>"><%= doc.name %></option>
+            <% }); %>
+          </select>
+        </div>
+        <div class="col-6 mt-5">
+          <button type="submit" class="btn btn-primary w-100 p-3">Add New Task</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+
+</html>

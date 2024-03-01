@@ -1,0 +1,48 @@
+<%- include("partials/_header.ejs") %>
+<%- include("partials/_navbar.ejs") %>
+<div class="container">
+  <div class="row breadCrumbHeader text-light mt-5">
+    <div class="col">
+      <h1 class="text-center py-5">TASKS LIST</h1>
+    </div>
+  </div>
+</div>
+<div class="container d-flex flex-wrap align-items-center mt-5">
+  <div class="col-12 mainAppContainer">
+    <table class="table table-striped">
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Created At</th>
+        <th>Last Updated</th>
+        <th>Actions</th>
+      </tr>
+      <% data.forEach(doc => { %>
+      <tr>
+        <td><%= doc.title %></td>
+        <td><%= doc.description %></td>
+        <td><%= doc.status %></td>
+        <td><%= doc.createdAt %></td>
+        <td><%= doc.lastUpdated %></td>
+        <td>
+          <div class="d-grid gap-2 col-12 mx-auto pe-3">
+            <a class="btn btn-warning" href="/update-task/<%= doc.id %>">Done</a>
+            <a class="btn btn-danger" href="/delete-task/<%= doc.id %>">Delete</a>
+          </div>
+        </td>
+      </tr>
+      <% }); %>
+    </table>
+  </div>
+  <div class="col-12">
+    <a href="/" class="fw-bold text-light"><i class="bi bi-box-arrow-in-up-left me-2"></i>Back to index</a>
+  </div>
+</div>
+</div>
+
+<!-- Bootstrap JD - CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>

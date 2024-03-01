@@ -1,0 +1,42 @@
+html {
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+
+.mainAppContainer {
+  height: 45vh;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(254, 254, 254) transparent;
+  scrollbar-gutter: stable;
+}
+
+/* NAVBAR */
+.navbar-brand {
+  font-size: 1.5rem;
+}
+.navbarCurlyBracket {
+  font-size: 1.5rem;
+  vertical-align: baseline;
+  background: -webkit-linear-gradient(#780000, #c1121f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* HEADER */
+.breadCrumbHeader {
+  background-image: url("/img/fondo-paisaje-digital-3d-boilerplates-ravendmilosh.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 5px;
+}
+
+/* ADD NEW USERS */
+.formRequiredAst {
+  font-size: 0.5rem;
+  vertical-align: top;
+  background: -webkit-linear-gradient(#780000, #c1121f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

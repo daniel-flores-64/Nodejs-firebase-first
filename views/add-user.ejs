@@ -1,0 +1,44 @@
+<%- include("partials/_header.ejs") %>
+<%- include("partials/_navbar.ejs") %>
+<div class="container">
+  <div class="row breadCrumbHeader text-light mt-5">
+    <div class="col">
+      <h1 class="text-center py-5">ADD USERS</h1>
+    </div>
+  </div>
+</div>
+<div class="container d-flex justify-content-center mt-5">
+  <div class="col-12">
+    <form method="POST" action="/add-user">
+
+      <div class="d-flex flex-wrap flex-column align-items-center">
+        <div class="col-6 mt-4">
+          <label for="title" class="form-label text-light"><span class="formRequiredAst">&#10033;</span> Email:</label>
+          <input type="text" id="title" name="email" class="form-control" placeholder="email@direction.com..." required />
+        </div>
+        <div class="col-6 mt-4">
+          <label for="description" class="form-label text-light"><span class="formRequiredAst">&#10033;</span> Mobile:</label>
+          <input type="tel" name="mobile" id="description" class="form-control" placeholder=" 6655775588" required />
+        </div>
+        <div class="col-6 mt-4">
+          <label for="dueDate" class="form-label text-light"><span class="formRequiredAst">&#10033;</span> Name:</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="Steve Jobs..." required />
+        </div>
+        <div class="col-6 mt-5">
+          <button type="submit" class="btn btn-primary w-100 p-3">Add User</button>
+        </div>
+        <div class="col-6 mt-3">
+          <a href="/" class="fw-bold text-light"><i class="bi bi-box-arrow-in-up-left me-2"></i>Back to index</a>
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <br />
+
+    </form>
+  </div>
+</div>
+</body>
+
+</html>
