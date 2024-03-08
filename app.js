@@ -150,8 +150,12 @@ async function deleteData(collectionName, docId) {
   const docRef = db.collection(collectionName).doc(docId);
   await docRef.delete();
 }
+//Demo Byker
+app.get("/demo", (req, res) => {
+  res.render("demo-byker");
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port http://localhost:${PORT}`);
 });
