@@ -1,12 +1,18 @@
+:root{
+    --primario:	#BE4141;
+    --secundario: #FFFFFF;
+    --apoyo1 :#707070;
+    --apoyo2: #646464;
+}
 body{
-  background-image: linear-gradient(#1114, #000), url("/prfBgImg.png");
+  background-image: linear-gradient(#fff4, #000), url("/prfBgImg.png");
   background-size: 428px 745px;
   background-repeat: no-repeat;
   height: 745px;
   width: 428px;
 }
 p, b{
-  color: #fff;
+  color: var(--secundario);
   text-transform: uppercase;
   margin-bottom: 0;
 }
@@ -14,19 +20,26 @@ button{
   position: fixed;
   bottom: 0;
   height: 60px;
-  background-color: #be4141;
+  background-color: var(--primario);
   border-style: none;
-  color: #fff;
+  color: var(--secundario);
   width: 100%;
 }
 .point{
-  background-color: #be4141;
+  background-color: var(--primario);
   border-radius: 100%;
   width: 5px;
   height: 5px;
   margin: 2px;
 }
 /*Clases de los Perfiles*/
+.sections{
+  position: fixed;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  color: var(--secundario);
+}
 .carousel-item.active{
   display: flex;
   flex-wrap: wrap;
@@ -50,5 +63,5 @@ button{
   margin-top: 1rem;
 }
 .important{
-  color: #be4141;
+  color: var(--primario);
 }
