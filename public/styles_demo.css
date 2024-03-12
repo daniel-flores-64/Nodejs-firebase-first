@@ -4,7 +4,10 @@
     --apoyo1 :#707070;
     --apoyo2: #646464;
 }
-body{
+body, .full-club-logo{
+  position: fixed;
+  top: 0;
+  z-index: -1;
   background-image: linear-gradient(#fff4, #000), url("/prfBgImg.png");
   background-size: 428px 745px;
   background-repeat: no-repeat;
@@ -17,13 +20,12 @@ p, b{
   margin-bottom: 0;
 }
 button{
-  position: fixed;
-  bottom: 0;
   height: 60px;
   background-color: var(--primario);
   border-style: none;
   color: var(--secundario);
   width: 100%;
+  text-transform: uppercase;
 }
 .point{
   background-color: var(--primario);
@@ -33,26 +35,45 @@ button{
   margin: 2px;
 }
 /*Clases de los Perfiles*/
-.sections{
-  position: fixed;
-  top: 0;
+.carousel-indicators{
   height: 100px;
   width: 100%;
   color: var(--secundario);
+  margin: 0;
+}
+.carousel-indicators .col-3{
+  background-color: var(--apoyo2); 
+  height: auto;
+}
+.carousel-indicators .col-3.active{
+  background-color: var(--primario);
+}
+.carousel-indicators button{
+  position: unset;
+  top: 0;
+}
+.carousel-indicators svg, .carousel-indicators i{
+  color: var(--primario);
+  fill: var(--primario);
+  width: 20px;
+  padding-top: 25%;
+}
+.carousel-indicators button.active svg, .carousel-indicators button.active i{
+  color: var(--secundario);
+  fill: var(--secundario);
 }
 .carousel-item.active{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  position:fixed ;
-  bottom: 60px;
-  text-align: center;
+  position: fixed;
+  top: 50%;
 }
 .user-name{
-  font-size: 40px;
+  font-size: 36px;
 }
-.nickname, .edad, .nacionalidad{
+.nickname, .edad, .nacionalidad, .caract{
   font-size: 20px;
 }
 .logo-byker, .logo-club{
@@ -62,6 +83,18 @@ button{
 .logo-club{
   margin-top: 1rem;
 }
-.important{
+.full-club-logo{
+  background-image: linear-gradient(#fff4, #000), url("/ImgRef - 1920 x 1080(10).png");
+}
+.important, .fill{
   color: var(--primario);
+}
+footer{
+  display: flex;
+  flex-wrap: nowrap;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  bottom: 0;
+  flex-direction: column;
 }

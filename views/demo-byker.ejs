@@ -1,22 +1,91 @@
 <%- include("partials/_header-demo.ejs") %>
     <div id="carouselExample" class="carousel slide">
+      <div class="carousel-indicators d-flex flex-wrap position-fixed top-0">
+        <button class="col-3 d-flex flex-wrap align-items-center flex-column active" type="button" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path d="M12,22h2.787A7.211,7.211,0,0,0,22,14.787V12a9.953,9.953,0,0,0-.6-3.377L21.394,8.6A10,10,0,1,0,12,22Zm7.737-12A7.953,7.953,0,0,1,20,12v2.787c0,.072-.01.142-.013.213H13.858a1,1,0,0,1-.961-.725l-.857-3A1,1,0,0,1,13,10ZM12,4a8,8,0,0,1,6.918,4H13a3,3,0,0,0-2.884,3.824l.857,3A3.013,3.013,0,0,0,13.858,17H19.5a5.182,5.182,0,0,1-4.71,3H12A8,8,0,0,1,12,4Z"></path>
+            </g>
+          </svg>Biker
+        </button>
+        <button class="col-3 d-flex flex-wrap align-items-center flex-column" type="button" data-bs-slide-to="1" aria-label="Slide 2">
+          <i class="bi bi-bandaid-fill"></i>Accidente
+        </button>
+        <button class="col-3 d-flex flex-wrap align-items-center flex-column" type="button" data-bs-slide-to="2" aria-label="Slide 3">
+          <i class="bi bi-person-badge-fill"></i>Seguro
+          </button>
+        <button class="col-3 d-flex flex-wrap align-items-center flex-column" type="button" data-bs-slide-to="3" aria-label="Slide 4">
+          <i class="bi bi-people-fill"></i>Club
+        </button>
+      </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <b class="user-name">LUISA <b class="important"> RODRIGUEZ </b></b>
+        <div class="carousel-item">
+          <b class="user-name">LUISA<b class="important"> RODRIGUEZ</b></b>
           <b class="nickname"><b class="important">'</b>LA BALA RODRIGUEZ<b class="important">'</b></b>
           <div class="d-flex flex-wrap justify-content-center align-items-center">
-            <p class="edad">32 años </p><div class="point"></div><p class="nacionalidad"> MEXICANA</p>
+            <p class="edad">32 años &nbsp;</p><div class="point"></div><p class="nacionalidad"> MEXICANA</p>
           </div>
-          <img class="logo-club" src="/biker-club-logo.png" alt="logo-club">>
-          <img class="logo-byker" src="/BikerTagLogoW.png" alt="logo-byker">
-          <div class="d-flex flex-wrap">
-            <p class="important">CONTACTO DE EMERGENCIA   <p class="name-contacto">ISABEL ALLENDE</p> </p>
+          <img class="logo-club" src=
+          "/pngegg.png" alt="logo-club"
+          >
+        </div>
+        <div class="carousel-item">
+          <b class="user-name">LUISA<b class="important"> RODRIGUEZ</b></b>
+          <div class="d-flex flex-wrap p-3">
+            <div class="col-6 d-flex flex-wrap flex-column align-items-start">
+              <p class="grupo-san">Grupo Sanguineo</p>
+              <p class="enfermedades">enfermedades</p>
+              <p>&nbsp;</p>
+              <p class="alergias">Alergias</p>
+              <p>&nbsp;</p>
+              <p class="tratamiento">Tratamiento</p>
+              <p class="medicamento">Medicamento(s)</p>
+            </div>
+            <div class="col-6 d-flex flex-wrap flex-column align-items-end important text-end">
+              <p class="grupo-san fill">A+</p>
+              <p class="enfermedades fill">Diabetes tipo 1</p>
+              <p class="alergias fill">Penicilina y medicamentos conexos</p>
+              <p class="tratamiento fill">Si</p>
+              <p class="medicamento fill">Insulina Nph 100Ui/M</p>
+            </div>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="...">
+          <b class="user-name">LUISA<b class="important"> RODRIGUEZ</b></b>
+          <div class="d-flex flex-wrap p-3">
+            <div class="col-6 d-flex flex-wrap flex-column align-items-start">
+              <p class="seguro">Seguro</p>
+              <p class="aseguradora">Aseguradora</p>
+              <p class="pòliza">pòliza</p>
+              <p class="telèfono">telèfono</p>
+            </div>
+            <div class="col-6 d-flex flex-wrap flex-column align-items-end important text-end">
+              <p class="seguro fill">Si</p>
+              <p class="aseguradora fill">BBVA</p>
+              <p class="poliza fill">160902160902</p>
+              <p class="telefono fill">55-8689-6898</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item active">
+          <img class="full-club-logo" src="/pngtree-flying-skull-with-pistons-for-motorcycle-club-logo-png-image_2136737.jpg" alt="">
+          <div class="d-flex flex-wrap p-3">
+            <div class="col-6 d-flex flex-wrap flex-column align-items-start">
+              <p class="club">Club</p>
+              <p class="puesto">Aseguradora</p>
+              <p class="fundado">pòliza</p>
+              <p class="enlace">telèfono</p>
+            </div>
+            <div class="col-6 d-flex flex-wrap flex-column align-items-end important text-end">
+              <p class="seguro fill">Si</p>
+              <p class="aseguradora fill">BBVA</p>
+              <p class="poliza fill">160902160902</p>
+              <p class="telefono fill">55-8689-6898</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <button>LLAMAR AHORA <i class="bi bi-telephone-outbound-fill"></i></button>
 <%- include("partials/_footer-demo.ejs") %>
