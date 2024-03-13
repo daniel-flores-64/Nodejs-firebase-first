@@ -41,6 +41,7 @@ button{
   color: var(--secundario);
   margin: 0;
 }
+<<<<<<< HEAD
 .carousel-indicators [data-bs-target]{
   background-color: var(--apoyo2); 
   width: 25% !important;
@@ -51,6 +52,13 @@ button{
   border: 0 !important;
 }
 .carousel-indicators [data-bs-target].active{
+=======
+.carousel-indicators .col-3{
+  background-color: var(--apoyo2); 
+  height: auto;
+}
+.carousel-indicators .col-3.active{
+>>>>>>> 2e8d153176fa6da0c7776c2225f1e6ade4ad0707
   background-color: var(--primario);
 }
 .carousel-indicators button{
@@ -66,9 +74,12 @@ button{
 .carousel-indicators button.active svg, .carousel-indicators button.active i{
   color: var(--secundario);
   fill: var(--secundario);
+<<<<<<< HEAD
 }
 .carousel-item{
   margin: -100%;
+=======
+>>>>>>> 2e8d153176fa6da0c7776c2225f1e6ade4ad0707
 }
 .carousel-item.active{
   display: flex;
@@ -76,7 +87,10 @@ button{
   flex-direction: column;
   align-items: center;
   position: fixed;
+<<<<<<< HEAD
   margin: 0;
+=======
+>>>>>>> 2e8d153176fa6da0c7776c2225f1e6ade4ad0707
   top: 50%;
 }
 .user-name{
