@@ -41,11 +41,16 @@ button{
   color: var(--secundario);
   margin: 0;
 }
-.carousel-indicators .col-3{
+.carousel-indicators [data-bs-target]{
   background-color: var(--apoyo2); 
-  height: auto;
+  width: 25% !important;
+  height: auto !important;
+  margin: 0 !important;
+  opacity: 1 !important;
+  text-indent: 1px !important;
+  border: 0 !important;
 }
-.carousel-indicators .col-3.active{
+.carousel-indicators [data-bs-target].active{
   background-color: var(--primario);
 }
 .carousel-indicators button{
@@ -62,12 +67,16 @@ button{
   color: var(--secundario);
   fill: var(--secundario);
 }
+.carousel-item{
+  margin: -100%;
+}
 .carousel-item.active{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   position: fixed;
+  margin: 0;
   top: 50%;
 }
 .user-name{

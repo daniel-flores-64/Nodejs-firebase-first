@@ -1,7 +1,7 @@
 <%- include("partials/_header-demo.ejs") %>
-    <div id="carouselExample" class="carousel slide">
+    <div id="carouselExampleIndicators" class="carousel slide">
       <div class="carousel-indicators d-flex flex-wrap position-fixed top-0">
-        <button class="col-3 d-flex flex-wrap align-items-center flex-column active" type="button" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="col-3 d-flex flex-wrap align-items-center flex-column active" aria-current="true" aria-label="Slide 1">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -10,18 +10,18 @@
             </g>
           </svg>Biker
         </button>
-        <button class="col-3 d-flex flex-wrap align-items-center flex-column" type="button" data-bs-slide-to="1" aria-label="Slide 2">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="col-3 d-flex flex-wrap align-items-center flex-column" aria-label="Slide 2">
           <i class="bi bi-bandaid-fill"></i>Accidente
         </button>
-        <button class="col-3 d-flex flex-wrap align-items-center flex-column" type="button" data-bs-slide-to="2" aria-label="Slide 3">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="col-3 d-flex flex-wrap align-items-center flex-column" aria-label="Slide 3">
           <i class="bi bi-person-badge-fill"></i>Seguro
           </button>
-        <button class="col-3 d-flex flex-wrap align-items-center flex-column" type="button" data-bs-slide-to="3" aria-label="Slide 4">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="col-3 d-flex flex-wrap align-items-center flex-column" aria-label="Slide 4">
           <i class="bi bi-people-fill"></i>Club
         </button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item">
+        <div class="carousel-item active" id="Fst">
           <b class="user-name">LUISA<b class="important"> RODRIGUEZ</b></b>
           <b class="nickname"><b class="important">'</b>LA BALA RODRIGUEZ<b class="important">'</b></b>
           <div class="d-flex flex-wrap justify-content-center align-items-center">
@@ -31,7 +31,7 @@
           "/pngegg.png" alt="logo-club"
           >
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" id="Sec">
           <b class="user-name">LUISA<b class="important"> RODRIGUEZ</b></b>
           <div class="d-flex flex-wrap p-3">
             <div class="col-6 d-flex flex-wrap flex-column align-items-start">
@@ -52,7 +52,7 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item" id="Trd">
           <b class="user-name">LUISA<b class="important"> RODRIGUEZ</b></b>
           <div class="d-flex flex-wrap p-3">
             <div class="col-6 d-flex flex-wrap flex-column align-items-start">
@@ -69,8 +69,8 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item active">
-          <img class="full-club-logo" src="/pngtree-flying-skull-with-pistons-for-motorcycle-club-logo-png-image_2136737.jpg" alt="">
+        <div class="carousel-item" id="Frt">
+          <div class="full-club-logo"></div>
           <div class="d-flex flex-wrap p-3">
             <div class="col-6 d-flex flex-wrap flex-column align-items-start">
               <p class="club">Club</p>
