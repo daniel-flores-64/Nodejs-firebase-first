@@ -1,3 +1,4 @@
+/*Las características comentadas eran para las versiones anteriores*/
 :root{
   --primario:	#BE4141;
   --secundario: #FFFFFF;
@@ -5,19 +6,23 @@
   --apoyo2: #646464;
 }
 body, .full-club-logo{
-position: fixed;
+position: absolute;
 top: 0;
 z-index: -1;
 background-image: linear-gradient(#fff4, #000), url("/prfBgImg.png");
 background-size: 428px 745px;
 background-repeat: no-repeat;
-height: 745px;
-width: 428px;
+/*height: 745px;*/
+width: 428px;height: auto;
 }
-p, b{
+.full-club-logo{
+  height: 745px;
+}
+p, b, h6, i, a{
 color: var(--secundario);
 text-transform: uppercase;
 margin-bottom: 0;
+text-decoration: none;
 }
 button{
 height: 60px;
@@ -34,9 +39,14 @@ height: 5px;
 margin: 2px;
 }
 /*Clases de los Perfiles*/
+.carousel-inner{
+  position: absolute;
+  top: 372px;
+}
 .carousel-indicators{
 height: 100px;
 color: var(--secundario);
+position: absolute;
 }
 .carousel-indicators [data-bs-target]{
 background-color: var(--apoyo2); 
@@ -66,9 +76,9 @@ display: flex;
 flex-wrap: wrap;
 flex-direction: column;
 align-items: center;
-position: fixed;
+/*position: absolute;*/
 margin: 0;
-top: 50%;
+/*top: 372px;*/
 }
 .user-name{
 font-size: 36px;
@@ -85,24 +95,54 @@ margin-top: 1rem;
 }
 .full-club-logo{
 background-image: linear-gradient(#fff4, #000), url("/ImgRef - 1920 x 1080(10).png");
+position: fixed;
 }
+/*#Frt{<!--Formato en caso de que la clase anterior se rompa-->
+  background-image: linear-gradient(#fff4, #000), url("/ImgRef - 1920 x 1080(10).png");
+}*/
 .important, .fill{
 color: var(--primario);
 }
-footer{
+.profile-bottom{
 display: flex;
 flex-wrap: nowrap;
-position: fixed;
+position: absolute;
+top: 610px;
 align-items: center;
 width: 100%;
-bottom: 0;
 flex-direction: column;
+}
+footer{
+  height: 745px;
+  width: 100%;
+  background-color: var(--apoyo2);
+  position: absolute;
+  top: 745px;
+}
+footer .logo-byker{
+  width: 60%;
+}
+.icon-box{
+  border: 1px solid var(--secundario);
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer svg{
+  fill: var(--secundario);
+  width: 20px;
+  height: 20px;
 }
 .currentPlayNextSongContainer {
   overflow: hidden;
 }
+footer h6, footer i{
+  font-size: 12px;
+}
 #contactAnimation {
-  /* animation properties */
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
@@ -114,7 +154,7 @@ flex-direction: column;
   from {
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
-    transform: translateX(100%);
+    transform: translateX(120%);
   }
   to {
     -moz-transform: translateX(-100%);
