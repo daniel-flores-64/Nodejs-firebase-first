@@ -24,7 +24,6 @@ height: 60px;
 background-color: var(--primario);
 border-style: none;
 color: var(--secundario);
-width: 100%;
 text-transform: uppercase;
 }
 .point{
@@ -37,25 +36,17 @@ margin: 2px;
 /*Clases de los Perfiles*/
 .carousel-indicators{
 height: 100px;
-width: 100%;
 color: var(--secundario);
-margin: 0;
 }
 .carousel-indicators [data-bs-target]{
 background-color: var(--apoyo2); 
-width: 25% !important;
-height: auto !important;
-margin: 0 !important;
-opacity: 1 !important;
-text-indent: 1px !important;
-border: 0 !important;
+width: 25%;
+height: auto;
+opacity: 1;
+text-indent: 1px;
 }
 .carousel-indicators [data-bs-target].active{
 background-color: var(--primario);
-}
-.carousel-indicators button{
-position: unset;
-top: 0;
 }
 .carousel-indicators svg, .carousel-indicators i{
 color: var(--primario);
@@ -106,4 +97,28 @@ align-items: center;
 width: 100%;
 bottom: 0;
 flex-direction: column;
+}
+.currentPlayNextSongContainer {
+  overflow: hidden;
+}
+#contactAnimation {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -moz-animation: contactAnimation 10s linear infinite;
+  -webkit-animation: contactAnimation 10s linear infinite;
+  animation: contactAnimation 10s linear infinite;
+}
+@keyframes contactAnimation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-120%);
+  }
 }
