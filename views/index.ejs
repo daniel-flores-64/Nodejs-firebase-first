@@ -1,45 +1,290 @@
-<%- include("partials/_header.ejs") %>
-<%- include("partials/_navbar.ejs") %>
-<div class="container">
-  <div class="row breadCrumbHeader text-light mt-5">
-    <div class="col">
-      <h1 class="text-center py-5">INDEX</h1>
-    </div>
-  </div>
-  <div class="container d-flex justify-content-center mt-5">
-    <div class="col-12 mainAppContainer">
-      <table class="table table-striped table-dark">
-        <tr>
-          <th>Name</th>
-          <th>Mobile</th>
-          <th>Email</th>
-          <th>Action</th>
-        </tr>
-        <% data.forEach(doc => { %>
-        <tr>
-          <td><%= doc.name %></td>
-          <td><%= doc.mobile %></td>
-          <td><%= doc.email %></td>
-          <td>
-            <div class="d-grid gap-2 col-12 mx-auto pe-3">
-              <a class="btn btn-light" href="/tasks/<%= doc.id %>">Task List</a>
-              <a class="btn btn-warning" href="/edit/<%= doc.id %>">Edit User</a>
-              <a class="btn btn-danger" href="/delete/<%= doc.id %>">Delete User</a>
+<%- include("partials/_header-demo.ejs") %>
+<nav></nav>
+<section class="blk-cont text-center" id="startPage">
+    <img src="BikerTagLogoW.png" alt="BikerTagLogo">
+    <h1 class="fw-bold">Te presentamos BikerTag</h1>
+    <div class="divider"></div>
+    <p class="title text-uppercase m-1">Protección y conexión inteligente</p>
+    <button class="w-100 text-uppercase">PRIMER MES GRATIS</button>
+    <p>¡Descubre la nueva dimensión de la seguridad en la carretera!</p>
+</section>
+<section class="wht-cont">
+    <h1>EXPLORA EL PODER DE <b class="important">BIKERTAG</b></h1>
+    <div class="divider"></div>
+    <p>Diseñado con cuidado y precisión para brindarte opciones versátiles que se integran perfectamente en tu vida de motociclisa o ciclista.</p>
+    <div class="d-flex flex-wrap flex-row">
+        <div class="col-lg-6 col-md-6">
+            <div class="d-flex flex-wrap flex-row my-3">
+                <div class="d-flex flex-wrap col-2 justify-content-center align-items-center">
+                    <div class="icon-box d-flex justify-content-center align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-qr-code-scan" viewBox="0 0 16 16">
+                            <path d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1v2.5a.5.5 0 0 1-1 0zm12 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V1h-2.5a.5.5 0 0 1-.5-.5M.5 12a.5.5 0 0 1 .5.5V15h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H15v-2.5a.5.5 0 0 1 .5-.5M4 4h1v1H4z"/>
+                            <path d="M7 2H2v5h5zM3 3h3v3H3zm2 8H4v1h1z"/>
+                            <path d="M7 9H2v5h5zm-4 1h3v3H3zm8-6h1v1h-1z"/>
+                            <path d="M9 2h5v5H9zm1 1v3h3V3zM8 8v2h1v1H8v1h2v-2h1v2h1v-1h2v-1h-3V8zm2 2H9V9h1zm4 2h-1v1h-2v1h3zm-4 2v-1H8v1z"/>
+                            <path d="M12 9h2V8h-2z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap col-9 flex-column">
+                    <p class="title">TECNOLOGÍA NFC Y QR</p>
+                    <p class="subtitle">
+                        Simplemente escanea el código QR o acerca tu celular
+                        compatible con NFC y accederás a la información
+                        <a href="" class="important">BIKERTAG</a> más importante.
+                    </p>
+                </div>
             </div>
-          </td>
-        </tr>
-        <% }); %>
-      </table>
+            <div class="d-flex flex-wrap flex-row my-3">
+                <div class="d-flex flex-wrap col-2 justify-content-center align-items-center">
+                    <div class="icon-box d-flex justify-content-center align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-badge" viewBox="0 0 16 16">
+                            <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap col-9 flex-column">
+                    <p class="title">PERFIL PERSONALIZADO</p>
+                    <p class="subtitle">
+                        Al acceder a tu perfil <a href="" class="important">BIKERTAG</a> se podrá consultar,
+                        principalmente, tu información más actual como biker
+                        para ayudar con tus primeros auxilios.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <div class="d-flex flex-wrap flex-row my-3">
+                <div class="d-flex flex-wrap col-2 justify-content-center align-items-center">
+                    <div class="icon-box d-flex justify-content-center align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart-pulse" viewBox="0 0 16 16">
+                            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857q.09.083.176.171a3 3 0 0 1 .176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01zM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5"/>
+                            <path d="M10.464 3.314a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap col-9 flex-column">
+                    <p class="title">ALIADO DURANTE EMERGENCIAS</p>
+                    <p class="subtitle">                            
+                        En tu perfil se podrán consultar datos como tu tipo
+                        de sangre, enfermedades, tratamientos y datos que
+                        faciliten el contacto con tu seguro.
+                    </p>
+                </div>
+            </div>
+            <div class="d-flex flex-wrap flex-row my-3">
+                <div class="d-flex flex-wrap col-2 justify-content-center align-items-center">
+                    <div class="icon-box d-flex justify-content-center align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                            <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+                            <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap col-9 flex-column">
+                    <p class="title">SEGURIDAD DE PRINCIPIO A FIN</p>
+                    <p class="subtitle">                           
+                        Toda tu información sensible se encontrará oculta
+                        y no estará disponible, si no hasta después de pasar
+                        por una verificación de dos pasos. <a href="" class="important">AVISO DE PRIVACIDAD</a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="row w-25 mx-auto my-5">
-    <a class="btn btn-primary w-100 p-3 text-uppercase fw-bold" href="/add-user">Add New User</a>
-    <a class="btn btn-secondary w-100 p-3 text-uppercase fw-bold mt-3" href="/add-task">Add New Task</a>
-  </div>
+</section>
+<section class="blk-cont img-blk-cont d-flex flex-wrap justify-content-center align-items-center text-white flex-column p-5" 
+style="background-image: linear-gradient(#0009, #0009), url(gelmis-bartulis-vPNMtnNAHVY-unsplash.png);background-size: 445px auto; background-repeat: no-repeat; background-position: center;">
+    <h1>INCLUYE A TU CLUB</h1>
+    <div class="divider"></div>
+    <p class="text-center text-white mt-2">
+        AGREGA LA INFORMACIÓN DE TU MOTO-CLUB
+        A TU PERFIL <a href="" class="important">BIKERTAG</a> Y PRESUME TU NUEVO ESCUDO
+    </p>
+    <div class="d-flex flex-wrap flex-column align-items-center col-8 my-3">
+            <div class="icon-box d-flex justify-content-center align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-qr-code-scan" viewBox="0 0 16 16">
+                    <path d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1v2.5a.5.5 0 0 1-1 0zm12 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V1h-2.5a.5.5 0 0 1-.5-.5M.5 12a.5.5 0 0 1 .5.5V15h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H15v-2.5a.5.5 0 0 1 .5-.5M4 4h1v1H4z"/>
+                    <path d="M7 2H2v5h5zM3 3h3v3H3zm2 8H4v1h1z"/>
+                    <path d="M7 9H2v5h5zm-4 1h3v3H3zm8-6h1v1h-1z"/>
+                    <path d="M9 2h5v5H9zm1 1v3h3V3zM8 8v2h1v1H8v1h2v-2h1v2h1v-1h2v-1h-3V8zm2 2H9V9h1zm4 2h-1v1h-2v1h3zm-4 2v-1H8v1z"/>
+                    <path d="M12 9h2V8h-2z"/>
+                </svg>
+            </div>
+        <div class="text-center flex-column mt-3">
+            <p class="title text-white">LOGO DE TU CLUB</p>
+            <p class="subtitle text-white">
+                Dale tu propio estilo al perfil.
+            </p>
+        </div>
+    </div>
+    <div class="d-flex flex-wrap flex-column align-items-center col-8 my-3">
+            <div class="icon-box d-flex justify-content-center align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                    <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+                </svg>
+            </div>
+        <div class="text-center flex-column mt-3">
+            <p class="title text-white">TU PUESTO</p>
+            <p class="subtitle text-white">
+                Presume tus colores
+            </p>
+        </div>
+    </div>
+    <div class="d-flex flex-wrap flex-column align-items-center col-8 my-3">            
+            <div class="icon-box d-flex justify-content-center align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-share-fill" viewBox="0 0 16 16">
+                    <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"/>
+                  </svg>
+            </div>
+        <div class="text-center flex-column mt-3">
+            <p class="title text-white">AGREGA UN ENLACE</p>
+            <p class="subtitle text-white">
+                Y da a conocer tu club al mundo
+            </p>
+        </div>
+    </div>
+</section>
+<section class="wht-cont">
+    <h1>PERSONALIZA TU ESCUDO DE SEGURIDAD</h1>
+    <div class="divider"></div>
+    <p class="mt-2">ELIGE ENTRE UNA VARIEDAD DE STICKERS, TARJETAS COLGANTES Y PAQUETES TODO EN UNO.</p>
+    <img class="m-3" src="ImgRef - 1920 x 1080.png" alt="Cards" style="height: 250px; width: auto;">
+    <p class="title">BIKER-CARD</p>
+    <p class="subtitle">Tecnología NFC, Código QR, Logo personalizable, Materia Metal / PVC.</p>
+    <div class="d-flex flex-row"><p class="text-decoration-line-through">$650MXN</p>&nbsp;<p class="important">$500 MXN</p></div>
+    <button class="col-10 mb-3">AÑADIR AL CARRITO</button>
+    <button class="scd-btn col-10">VER TODOS LOS PRODUCTOS</button>
+</section>
+<section class="blk-cont img-blk-cont d-flex flex-wrap align-items-center justify-content-center" 
+style="background-image: linear-gradient(#0009, #0009), url(glen-alejandro-EQ7vori1wJU-unsplash.png); background-size: auto 400px; background-repeat: no-repeat; background-position: center; height: 400px;">
+    <h1>BIKERTAG TE PROTEGE DURANTE TUS VIAJES NOCTURNOS</h1>
+    <div class="divider"></div>
+    <p class="mt-2">
+        LOS ESCUDOS <a href="" class="important">BIKERTAG</a> DE TIPO STICKER
+        CUENTAN CON 2 VERSIONES DISTINTAS
+        LA REFLEJANTE Y LA FLOURESCENTE
+    </p>
+</section>
+<section class="wht-cont">
+    <div class="d-flex flex-wrap justify-content-center align-items-center flex-column col-lg-6 col-md-6">
+        <h1>Escudo de alta seguridad</h1>
+        <div class="divider mb-4"></div>
+        <img src="/Adhesivos2.png" class="d-block w-100" alt="sticker.png">
+        <a class="bg-light-subtle rounded-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                    </svg>
+        </a>
+        <div class="pointed-line">
+            <div class="char-circle">Icono</div>
+            <p class="title">Adhesivo fuerte pero removible</p>
+            <p class="subtitle">Se adhiere firmemente sin dañar la superficie, pero también puede retirarse sin dejar residuos.</p>
+        </div>
+        <div class="pointed-line">
+            <div class="char-circle">Icono</div>
+            <p class="title">Tamaño Compacto</p>
+            <p class="subtitle">Diseñado para adaptarse perfectamente en la parte trasera de tu casco o en el lateral de tu moto.</p>
+        </div>
+        <div class="pointed-line">
+            <div class="char-circle">Icono</div>
+            <p class="title">Resistente a las condiciones externas</p>
+            <p class="subtitle">Fabricado con materiales resistentes a la intemperie y protección UV, garantizando  su durabilidad ante diferentes condiciones climáticas</p>
+        </div>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center align-items-center flex-column col-lg-6 col-md-6">
+        <h1>Tecnología de proximidad</h1>
+        <div class="divider"></div>
+        <p class="mb-4">TU STICKER CUENTA CON UNA CAPA EXTRA DE RESINA QUE ASEGURARÁ SU DURABILIDAD</p>
+        <img src="/Tarjeta.png" class="d-block w-100" alt="sticker.png">
+        <a class="bg-light-subtle rounded-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+            </svg>
+        </a>
+        <div class="pointed-line">
+            <div class="char-circle">Icono</div>
+            <p class="title">Tamaño portátil</p>
+            <p class="subtitle">Diseño atractivo y elegante que cabe en cualquier billetera estandar</p>
+        </div>
+        <div class="pointed-line">
+            <div class="char-circle">Icono</div>
+            <p class="title">Construcción metálica o PVC</p>
+            <p class="subtitle">Hecha de materiales resistentes para proteger la tarjeta y sus componentes en condiciones cotidianas.</p>
+        </div>
+        <div class="pointed-line">
+            <div class="char-circle">Icono</div>
+            <p class="title">Delgada y Liviana</p>
+            <p class="subtitle">No agrega volumen innecesaria a tu cartera y puede llevarse cómodamente y cabe en cualquier billetera estandar.</p>
+        </div>
 </div>
-
-<!-- Bootstrap JS - CDN -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-
-</html>
+</section>
+<section class="blk-cont img-blk-cont d-flex flex-wrap justify-content-center align-items-center text-center text-white flex-column p-5">
+    <h1>INSPIRAMOS CONFIANZA A TRAVÉS DE RESULTADOS COMPROBABLES</h1>
+    <div class="divider"></div>
+    <p class="mt-4">
+        ALGUNOS DE LOS CLIENTES DE <a href="" class="important">BIKERTAG</a> ORGULLOSOS DE SUS ESCUDOS
+    </p>
+    <div id="clientsCarousel" class="carousel slide d-flex flex-wrap justify-content-center">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#clientsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#clientsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#clientsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item p-5 active">
+            <img src="/ImgRef - 1920 x 1080(3).png" class="" alt="">
+            <h2 class="upper important">ADRIAN ROMERO</h2>
+            <p class="title upper"> USA <a class="important">BIKERTAG</a> DESDE HACE 1 AÑO</p>
+            <p class="subtitle">
+                "Me encanta la solución, me siento más seguro pero afortunadamente
+                no ha sido necesario hacer uso de ella..."
+            </p>
+          </div>
+          <div class="carousel-item p-5">
+            <img src="/ImgRef - 1920 x 1080(3).png" class="" alt="">
+            <h2 class="upper important">ADRIAN ROMERO</h2>
+            <p class="title upper"> USA <a class="important">BIKERTAG</a> DESDE HACE 1 AÑO</p>
+            <p class="subtitle">
+                "Me encanta la solución, me siento más seguro pero afortunadamente
+                no ha sido necesario hacer uso de ella..."
+            </p>
+          </div>
+          <div class="carousel-item p-5">
+            <img src="/ImgRef - 1920 x 1080(3).png" class="" alt="">
+            <h2 class="upper important">ADRIAN ROMERO</h2>
+            <p class="title upper"> USA <a class="important">BIKERTAG</a> DESDE HACE 1 AÑO</p>
+            <p class="subtitle">
+                "Me encanta la solución, me siento más seguro pero afortunadamente
+                no ha sido necesario hacer uso de ella..."
+            </p>
+          </div>
+        </div>
+        <button class="col-10 mt-2">VER DEMO EN VIVO</button>
+    </div>
+</section>
+<section class="wht-cont my-5">
+    <h1>MEMBRESÍA PREMIUM</h1>
+    <div class="divider"></div>
+    <p class="mt-2 upper">TU PRIMER MES ES GRATIS CORTESÍA DE <a class="important">BIKERTAG</a></p>
+    <div class="blk-cont d-flex flex-wrap justify-content-center text-center flex-column w-100 rounded">
+        <h1 class="important upper fw-bold mt-2">1 AÑO</h1>
+        <p class="text-decoration-line-through text-secondary fs-2 m-1">$2550 MXN</p>
+        <p class="fs-2 m-1"><a class="important">$</a>1500 <a class="important">MXN</a></p>
+        <div class="divider bg-secondary position-relative"></div>
+        <div class="text-start px-5 mt-3">
+            <p>- Un sticker con tecnología QR y NFC para el casco.</p>
+            <p>- Un sticker con QR y NFC para tu moto / bicicleta.</p>
+            <p>- Un llavero QR y NFC asegurado para colgar.</p>
+            <p>- Un micrositio con tu información en línea 24/7.</p>
+            <p>- Apartado para tu club.</p>
+            <p>- Apartado de seguro.</p>
+            <p>- Apartado de enfermedades y tratamientos.</p>
+            <p>- Contacto de emergencia.</p>
+            <p>- Doble factor de seguridad.</p>
+        </div>
+        <button class="upper m-5">COMENZAR GRATIS</button>
+    </div>
+</section>
+<%- include("partials/_footer-demo.ejs") %>

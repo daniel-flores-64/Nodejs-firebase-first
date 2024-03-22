@@ -1,9 +1,10 @@
 /*Las características comentadas eran para las versiones anteriores*/
 :root{
-  --primario:	#BE4141;
-  --secundario: #FFFFFF;
-  --apoyo1 :#707070;
-  --apoyo2: #646464;
+  --primario:	#A4161A;
+  --secundario: #BA181B;
+  --apoyo1 :#161A1D;
+  --apoyo2: #0B090A;
+  --text-wht:#fff;
 }
 body, .full-club-logo{
 position: absolute;
@@ -14,12 +15,13 @@ background-size: 428px 745px;
 background-repeat: no-repeat;
 /*height: 745px;*/
 width: 428px;height: auto;
+overflow-x: hidden;
 }
 .full-club-logo{
   height: 745px;
 }
 p, b, h6, i, a{
-color: var(--secundario);
+color: var(--text-wht);
 text-transform: uppercase;
 margin-bottom: 0;
 text-decoration: none;
@@ -28,7 +30,7 @@ button{
 height: 60px;
 background-color: var(--primario);
 border-style: none;
-color: var(--secundario);
+color: var(--text-wht);
 text-transform: uppercase;
 }
 .point{
@@ -45,7 +47,7 @@ margin: 2px;
 }
 .carousel-indicators{
 height: 100px;
-color: var(--secundario);
+color: var(--text-wht);
 position: absolute;
 }
 .carousel-indicators [data-bs-target]{
@@ -65,8 +67,8 @@ width: 20px;
 padding-top: 25%;
 }
 .carousel-indicators button.active svg, .carousel-indicators button.active i{
-color: var(--secundario);
-fill: var(--secundario);
+color: var(--text-wht);
+fill: var(--text-wht);
 }
 .carousel-item{
 margin: -100%;
@@ -143,22 +145,14 @@ footer h6, footer i{
   font-size: 12px;
 }
 #contactAnimation {
-  -moz-transform: translateX(100%);
-  -webkit-transform: translateX(100%);
   transform: translateX(100%);
-  -moz-animation: contactAnimation 10s linear infinite;
-  -webkit-animation: contactAnimation 10s linear infinite;
   animation: contactAnimation 10s linear infinite;
 }
 @keyframes contactAnimation {
   from {
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
     transform: translateX(120%);
   }
   to {
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
     transform: translateX(-120%);
   }
 }
