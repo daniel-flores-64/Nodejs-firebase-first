@@ -1,0 +1,36 @@
+<%- include("partials/_header-main.ejs") %>
+<h1>Bienvenido <span class="user-name">Demo</span></h1>
+<h3>Aqui puedes editar tu información</h3>
+<form action="/update/<%= doc.id %>" method="POST">
+    <div class="d-flex flex-wrap flex-column align-items-center">
+        <div class="col-md-5 mx-2">
+            <div class="d-flex flex-wrap flex-column">
+              <label for="nickname" class="form-label text-white">Apodo</label><input class="my-2" name="apodo" value="<%= doc.name %>" maxlength="20">
+            </div>
+            <div class="d-flex flex-wrap flex-column">
+              <label for="contact-name" class="form-label text-white">Nombre de Contacto de Emergencia</label><input class="my-2" name="cont-emer" value="<%= doc.name %>" maxlength="30">
+            </div>
+            <div class="d-flex flex-wrap flex-column">
+              <label for="contact-num" class="form-label text-white">Número de Emergencia</label><input class="my-2" maxlength="10" name="cont-emer-num" value="<%= doc.name %>">
+            </div>
+            <div class="d-flex flex-wrap flex-column">
+              <label for="club-byker" class="form-label text-white">Club Byker</label><input class="my-2" name="clubs" value="<%= doc.name %>" maxlength="20">
+            </div>
+        </div>
+        <div class="col-md-5 mx-2">
+            <div class="d-flex flex-wrap flex-column">
+              <label for="seguro" class="form-label text-white">Seguro</label><input class="my-2" name="seguro" value="<%= doc.name %>" maxlength="30">
+            </div>
+            <div class="d-flex flex-wrap flex-column">
+              <label for="sickness" class="form-label text-white">Enfermedades</label><input class="my-2" name="enfermedades" value="<%= doc.name %>">
+            </div>
+            <div class="d-flex flex-wrap flex-column">
+              <label for="alergias" class="form-label text-white">Alergias</label><input class="my-2" name="alergias" value="<%= doc.name %>">
+            </div>
+            <div class="d-flex flex-wrap flex-column">
+              <label for="tratamiento" class="form-label text-white">Tratamiento</label><input class="my-2" name="tratamiento" value="<%= doc.name %>">
+            </div>
+        </div>
+    </div>
+</form>
+<%- include("partials/_footer-demo.ejs") %>

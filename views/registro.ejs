@@ -1,0 +1,96 @@
+<%- include("partials/_header-main.ejs") %>
+<section class="wht-cont d-flex flex-wrap flex-column align-items-center justify-content-center">
+  <div class="blk-cont col-md-8 d-flex flex-wrap flex-column justify-content-center align-items-center rounded-2 p-3 pb-5 mb-4">
+    <div class="section-head d-flex flex-wrap flex-column align-items-center">
+      <h1>Información de cuenta</h1>
+      <div class="divider"></div>
+      <p>Crea tus datos.</p>
+    </div>
+    <div class="col-8 d-flex flex-wrap flex-column justify-content-center align-items-center">
+      <div class="d-flex flex-wrap flex-column w-100">
+        <label for="user-name" class="form-label text-white col-6">Ingrese su Usuario</label><input class="my-2" type="text" name="user-name" maxlength="20" required="required">
+      </div>
+      <div class="d-flex flex-wrap flex-column w-100">
+        <label for="password" class="form-label text-white">Contraseña</label><input class="my-2" type="password" name="password" maxlength="20" required="required">
+      </div>
+      <div class="d-flex flex-wrap flex-column w-100">
+        <label for="password" class="form-label text-white">Confirmar Contraseña</label><input class="my-2" type="password" name="password-conf" maxlength="20" required="required">
+      </div>
+    </div>
+    <button type="button" class="" data-bs-toggle="collapse" data-bs-target="#full-data" aria-expanded="false" aria-controls="collapseExample">Siguiente</button>
+  </div>
+  <div id="full-data" class="collapse blk-cont col-md-8 rounded-2 p-3 pb-5">
+    <div class="section-head d-flex flex-wrap flex-column align-items-center">
+            <h1>Vamos a comenzar</h1>
+            <div class="divider"></div>
+            <p>Para comenzar por favor proporciona tus siguientes datos.</p>
+    </div>
+    <form class="w-100 d-flex flex-wrap justify-content-center" method="POST" action="/add-user">
+      <div class="col-md-5 mx-2">
+            <div class="d-flex flex-wrap flex-column">
+              <label for="full-name" class="form-label text-white col-6">Nombre(s)*</label><input class="my-2" type="text" name="nombre" maxlength="40" required="required">
+            </div>
+            <div class="d-flex flex-wrap flex-column">
+              <label for="last-name" class="form-label text-white">Apellidos*</label><input class="my-2" type="text" name="apellidos" maxlength="30" required="required">
+            </div>
+            <div class="d-flex flex-wrap flex-column">
+              <label for="nickname" class="form-label text-white">Apodo</label><input class="my-2" type="text" name="apodo" maxlength="20">
+            </div>
+            <div class="d-flex flex-wrap flex-column">
+              <label for="nation" class="form-label text-white">Nacionalidad*</label><select class="my-2" name="nacionalidad" required="required">
+                <option value="MEXICANA">Mexicana</option>
+              </select>
+            </div>
+            <div class="d-flex flex-wrap flex-column">
+              <label for="age" class="form-label text-white">Fecha de nacimiento*</label><input class="my-2" type="date" name="edad" required="required">
+            </div>
+            <div class="d-flex flex-wrap flex-column">
+              <label for="contact-name" class="form-label text-white">Nombre de Contacto de Emergencia*</label><input class="my-2" type="text" name="cont-emer" maxlength="30" required="required">
+            </div>
+            <div class="d-flex flex-wrap flex-column">
+              <label for="contact-num" class="form-label text-white">Número de Emergencia*</label><input class="my-2" type="text" maxlength="10" name="cont-emer-num" required="required">
+            </div>
+      </div>
+      <div class="col-md-5 mx-2">
+          <div class="d-flex flex-wrap flex-column">
+              <label for="blood-type" class="form-label text-white">Grupo Sanguineo*</label><select class="my-2" type="text" name="grp-sang" required="required">
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB">AB</option>
+              </select>
+          </div>
+          <div class="d-flex flex-wrap flex-column">
+              <label for="club-byker" class="form-label text-white">Club Byker</label><input class="my-2" type="text" name="clubs" maxlength="20">
+          </div>
+          <div class="d-flex flex-wrap flex-column">
+              <label for="seguro" class="form-label text-white">Seguro</label><input class="my-2" type="text" name="seguro" maxlength="30">
+          </div>
+          <div class="d-flex flex-wrap flex-column">
+            <label for="sickness" class="form-label text-white">Enfermedades*</label>
+            <input class="my-2" type="text"
+            placeholder="¿Cuántas enfermedades desea especificar?" maxlength="1" pattern="[0-9]{1}" style="font-size: 20px; display: none;">
+            <!--Hacer que la cantidad de enfermedades se vuelva el número de rows, agregar el name="enfermedades" en caso de ser necesario-->
+            <textarea class="my-2" name="enfermedades" id="enfermedades" rows="8" placeholder="(ej. diabetes, miopia, ...)" required="required"></textarea>
+          </div>
+          <div class="d-flex flex-wrap flex-column">
+            <label for="alergias" class="form-label text-white">Alergias*</label>
+            <input class="my-2" type="text" style="display: none;"
+            placeholder="¿Cuántas alergias desea especificar?" maxlength="1" required="required">
+            <textarea class="my-2" name="alergias" id="" rows="8" placeholder="(ej. diabetes, miopia, ...)" required></textarea>
+          </div>
+          <div class="d-flex flex-wrap flex-column">
+            <label for="tratamiento" class="form-label text-white">Tratamiento*</label>
+            <input class="my-2" type="text"
+            placeholder="¿A cuántos tratamientos está sometido?" maxlength="1" style="font-size: 20px; display: none;" required="required">
+            <textarea class="my-2" name="tratamiento" id="" rows="8" placeholder="(ej. diabetes, miopia, ...)"></textarea>
+          </div>
+      </div>
+      <button type="submit" class="">Registrar</button>
+    </form>
+  </div>
+</section>
+<%- include("partials/_footer-demo.ejs") %>

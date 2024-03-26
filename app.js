@@ -159,6 +159,22 @@ app.get("/index", (req, res) => {
   res.render("index");
 })
 
+app.get("/registro", (req, res) => {
+  res.render("registro");
+})
+
+app.get("/login", (req, res) => {
+  res.render("login");
+})
+
+app.get("/productos", (req, res) => {
+  res.render("productos");
+})
+
+app.get("/profile", (req, res) => {
+  res.render("profile");
+})
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port http://localhost:${PORT}`);

@@ -1,17 +1,21 @@
-<%- include("partials/_header-demo.ejs") %>
+<%- include("partials/_header-main.ejs") %>
 <nav></nav>
-<section class="blk-cont text-center" id="startPage">
+<section class="blk-cont d-flex flex-wrap flex-column align-items-center justify-content-center text-center" id="startPage">
     <img src="BikerTagLogoW.png" alt="BikerTagLogo">
-    <h1 class="fw-bold">Te presentamos BikerTag</h1>
-    <div class="divider"></div>
-    <p class="title text-uppercase m-1">Protección y conexión inteligente</p>
-    <button class="w-100 text-uppercase">PRIMER MES GRATIS</button>
+    <div class="section-head d-flex flex-wrap flex-column align-items-center">
+        <h1 class="fw-bold">Te presentamos BikerTag</h1>
+        <div class="divider"></div>
+        <h3 class="title text-uppercase m-1">Protección y conexión inteligente</h3>
+    </div>
+    <a href="/demo" class="col-10 text-uppercase"><button type="button">PRIMER MES GRATIS</button></a>
     <p>¡Descubre la nueva dimensión de la seguridad en la carretera!</p>
 </section>
-<section class="wht-cont">
-    <h1>EXPLORA EL PODER DE <b class="important">BIKERTAG</b></h1>
-    <div class="divider"></div>
-    <p>Diseñado con cuidado y precisión para brindarte opciones versátiles que se integran perfectamente en tu vida de motociclisa o ciclista.</p>
+<section class="wht-cont d-flex flex-wrap flex-column align-items-center justify-content-center">
+    <div class="section-head d-flex flex-wrap flex-column align-items-center">
+        <h1>EXPLORA EL PODER DE <b class="important">BIKERTAG</b></h1>
+        <div class="divider"></div>
+        <h3>Diseñado con cuidado y precisión para brindarte opciones versátiles que se integran perfectamente en tu vida de motociclisa o ciclista.</h3>
+    </div>
     <div class="d-flex flex-wrap flex-row">
         <div class="col-lg-6 col-md-6">
             <div class="d-flex flex-wrap flex-row my-3">
@@ -95,22 +99,21 @@
     </div>
 </section>
 <section class="blk-cont img-blk-cont d-flex flex-wrap justify-content-center align-items-center text-white flex-column p-5" 
-style="background-image: linear-gradient(#0009, #0009), url(gelmis-bartulis-vPNMtnNAHVY-unsplash.png);background-size: 445px auto; background-repeat: no-repeat; background-position: center;">
-    <h1>INCLUYE A TU CLUB</h1>
-    <div class="divider"></div>
-    <p class="text-center text-white mt-2">
-        AGREGA LA INFORMACIÓN DE TU MOTO-CLUB
-        A TU PERFIL <a href="" class="important">BIKERTAG</a> Y PRESUME TU NUEVO ESCUDO
-    </p>
+style="background-image: linear-gradient(#0009, #0009), url(gelmis-bartulis-vPNMtnNAHVY-unsplash.png);background-size: 500px auto; background-repeat: no-repeat; background-position: center;">
+    <div class="section-head d-flex flex-wrap flex-column align-items-center">
+        <h1>INCLUYE A TU CLUB</h1>
+        <div class="divider"></div>
+        <h3 class="text-center text-white mt-2">
+            AGREGA LA INFORMACIÓN DE TU MOTO-CLUB
+            A TU PERFIL <a href="" class="important">BIKERTAG</a> Y PRESUME TU NUEVO ESCUDO
+        </h3>
+    </div>
     <div class="d-flex flex-wrap flex-column align-items-center col-8 my-3">
             <div class="icon-box d-flex justify-content-center align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-qr-code-scan" viewBox="0 0 16 16">
-                    <path d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1v2.5a.5.5 0 0 1-1 0zm12 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V1h-2.5a.5.5 0 0 1-.5-.5M.5 12a.5.5 0 0 1 .5.5V15h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H15v-2.5a.5.5 0 0 1 .5-.5M4 4h1v1H4z"/>
-                    <path d="M7 2H2v5h5zM3 3h3v3H3zm2 8H4v1h1z"/>
-                    <path d="M7 9H2v5h5zm-4 1h3v3H3zm8-6h1v1h-1z"/>
-                    <path d="M9 2h5v5H9zm1 1v3h3V3zM8 8v2h1v1H8v1h2v-2h1v2h1v-1h2v-1h-3V8zm2 2H9V9h1zm4 2h-1v1h-2v1h3zm-4 2v-1H8v1z"/>
-                    <path d="M12 9h2V8h-2z"/>
-                </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-image" viewBox="0 0 16 16">
+                <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"/>
+              </svg>
             </div>
         <div class="text-center flex-column mt-3">
             <p class="title text-white">LOGO DE TU CLUB</p>
@@ -146,31 +149,37 @@ style="background-image: linear-gradient(#0009, #0009), url(gelmis-bartulis-vPNM
         </div>
     </div>
 </section>
-<section class="wht-cont">
-    <h1>PERSONALIZA TU ESCUDO DE SEGURIDAD</h1>
-    <div class="divider"></div>
-    <p class="mt-2">ELIGE ENTRE UNA VARIEDAD DE STICKERS, TARJETAS COLGANTES Y PAQUETES TODO EN UNO.</p>
+<section class="wht-cont d-flex flex-wrap flex-column align-items-center justify-content-center">
+    <div class="section-head d-flex flex-wrap flex-column align-items-center">
+        <h1>PERSONALIZA TU ESCUDO DE SEGURIDAD</h1>
+        <div class="divider"></div>
+        <h3 class="">ELIGE ENTRE UNA VARIEDAD DE STICKERS, TARJETAS COLGANTES Y PAQUETES TODO EN UNO.</h3>
+    </div>
     <img class="m-3" src="ImgRef - 1920 x 1080.png" alt="Cards" style="height: 250px; width: auto;">
     <p class="title">BIKER-CARD</p>
     <p class="subtitle">Tecnología NFC, Código QR, Logo personalizable, Materia Metal / PVC.</p>
     <div class="d-flex flex-row"><p class="text-decoration-line-through">$650MXN</p>&nbsp;<p class="important">$500 MXN</p></div>
-    <button class="col-10 mb-3">AÑADIR AL CARRITO</button>
-    <button class="scd-btn col-10">VER TODOS LOS PRODUCTOS</button>
+    <a href="" class="col-10 text-uppercase mb-3"><button type="button">AÑADIR AL CARRITO</button></a>
+    <a href="" class="scd-btn col-10 text-uppercase"><button type="button" class="scd-btn">VER TODOS LOS PRODUCTOS</button></a>
 </section>
 <section class="blk-cont img-blk-cont d-flex flex-wrap align-items-center justify-content-center" 
 style="background-image: linear-gradient(#0009, #0009), url(glen-alejandro-EQ7vori1wJU-unsplash.png); background-size: auto 400px; background-repeat: no-repeat; background-position: center; height: 400px;">
-    <h1>BIKERTAG TE PROTEGE DURANTE TUS VIAJES NOCTURNOS</h1>
-    <div class="divider"></div>
-    <p class="mt-2">
-        LOS ESCUDOS <a href="" class="important">BIKERTAG</a> DE TIPO STICKER
-        CUENTAN CON 2 VERSIONES DISTINTAS
-        LA REFLEJANTE Y LA FLOURESCENTE
-    </p>
+    <div class="section-head d-flex flex-wrap flex-column align-items-center">
+        <h1>BIKERTAG TE PROTEGE DURANTE TUS VIAJES NOCTURNOS</h1>
+        <div class="divider"></div>
+        <h3 class="mt-2">
+            LOS ESCUDOS <a href="" class="important">BIKERTAG</a> DE TIPO STICKER
+            CUENTAN CON 2 VERSIONES DISTINTAS
+            LA REFLEJANTE Y LA FLOURESCENTE
+        </h3>
+    </div>
 </section>
-<section class="wht-cont">
+<section class="wht-cont d-flex flex-wrap flex-column align-items-center justify-content-center">
     <div class="d-flex flex-wrap justify-content-center align-items-center flex-column col-lg-6 col-md-6">
-        <h1>Escudo de alta seguridad</h1>
-        <div class="divider mb-4"></div>
+        <div class="section-head d-flex flex-wrap flex-column align-items-center">
+            <h1>Escudo de alta seguridad</h1>
+            <div class="divider mb-4"></div>
+        </div>
         <img src="/Adhesivos2.png" class="d-block w-100" alt="sticker.png">
         <a class="bg-light-subtle rounded-circle">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
@@ -194,9 +203,11 @@ style="background-image: linear-gradient(#0009, #0009), url(glen-alejandro-EQ7vo
         </div>
     </div>
     <div class="d-flex flex-wrap justify-content-center align-items-center flex-column col-lg-6 col-md-6">
-        <h1>Tecnología de proximidad</h1>
-        <div class="divider"></div>
-        <p class="mb-4">TU STICKER CUENTA CON UNA CAPA EXTRA DE RESINA QUE ASEGURARÁ SU DURABILIDAD</p>
+        <div class="section-head d-flex flex-wrap flex-column align-items-center">
+            <h1>Tecnología de proximidad</h1>
+            <div class="divider"></div>
+            <h3 class="mb-4">TU STICKER CUENTA CON UNA CAPA EXTRA DE RESINA QUE ASEGURARÁ SU DURABILIDAD</h3>
+        </div>
         <img src="/Tarjeta.png" class="d-block w-100" alt="sticker.png">
         <a class="bg-light-subtle rounded-circle">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
@@ -220,12 +231,14 @@ style="background-image: linear-gradient(#0009, #0009), url(glen-alejandro-EQ7vo
         </div>
 </div>
 </section>
-<section class="blk-cont img-blk-cont d-flex flex-wrap justify-content-center align-items-center text-center text-white flex-column p-5">
-    <h1>INSPIRAMOS CONFIANZA A TRAVÉS DE RESULTADOS COMPROBABLES</h1>
-    <div class="divider"></div>
-    <p class="mt-4">
-        ALGUNOS DE LOS CLIENTES DE <a href="" class="important">BIKERTAG</a> ORGULLOSOS DE SUS ESCUDOS
-    </p>
+<section class="blk-cont d-flex flex-wrap justify-content-center align-items-center text-center text-white flex-column p-5">
+    <div class="section-head d-flex flex-wrap flex-column align-items-center">
+        <h1>INSPIRAMOS CONFIANZA A TRAVÉS DE RESULTADOS COMPROBABLES</h1>
+        <div class="divider"></div>
+        <h3 class="">
+            ALGUNOS DE LOS CLIENTES DE <a href="" class="important">BIKERTAG</a> ORGULLOSOS DE SUS ESCUDOS
+        </h3>
+    </div>
     <div id="clientsCarousel" class="carousel slide d-flex flex-wrap justify-content-center">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#clientsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -236,7 +249,7 @@ style="background-image: linear-gradient(#0009, #0009), url(glen-alejandro-EQ7vo
           <div class="carousel-item p-5 active">
             <img src="/ImgRef - 1920 x 1080(3).png" class="" alt="">
             <h2 class="upper important">ADRIAN ROMERO</h2>
-            <p class="title upper"> USA <a class="important">BIKERTAG</a> DESDE HACE 1 AÑO</p>
+            <p class="title text-uppercase"> USA <a class="important">BIKERTAG</a> DESDE HACE 1 AÑO</p>
             <p class="subtitle">
                 "Me encanta la solución, me siento más seguro pero afortunadamente
                 no ha sido necesario hacer uso de ella..."
@@ -245,7 +258,7 @@ style="background-image: linear-gradient(#0009, #0009), url(glen-alejandro-EQ7vo
           <div class="carousel-item p-5">
             <img src="/ImgRef - 1920 x 1080(3).png" class="" alt="">
             <h2 class="upper important">ADRIAN ROMERO</h2>
-            <p class="title upper"> USA <a class="important">BIKERTAG</a> DESDE HACE 1 AÑO</p>
+            <p class="title text-uppercase"> USA <a class="important">BIKERTAG</a> DESDE HACE 1 AÑO</p>
             <p class="subtitle">
                 "Me encanta la solución, me siento más seguro pero afortunadamente
                 no ha sido necesario hacer uso de ella..."
@@ -254,24 +267,26 @@ style="background-image: linear-gradient(#0009, #0009), url(glen-alejandro-EQ7vo
           <div class="carousel-item p-5">
             <img src="/ImgRef - 1920 x 1080(3).png" class="" alt="">
             <h2 class="upper important">ADRIAN ROMERO</h2>
-            <p class="title upper"> USA <a class="important">BIKERTAG</a> DESDE HACE 1 AÑO</p>
+            <p class="title text-uppercase"> USA <a class="important">BIKERTAG</a> DESDE HACE 1 AÑO</p>
             <p class="subtitle">
                 "Me encanta la solución, me siento más seguro pero afortunadamente
                 no ha sido necesario hacer uso de ella..."
             </p>
           </div>
         </div>
-        <button class="col-10 mt-2">VER DEMO EN VIVO</button>
+        <a href="" class="col-10 text-uppercase mt-2"><button type="button" class="w-100">VER DEMO EN VIVO</button></a>
     </div>
 </section>
-<section class="wht-cont my-5">
-    <h1>MEMBRESÍA PREMIUM</h1>
-    <div class="divider"></div>
-    <p class="mt-2 upper">TU PRIMER MES ES GRATIS CORTESÍA DE <a class="important">BIKERTAG</a></p>
-    <div class="blk-cont d-flex flex-wrap justify-content-center text-center flex-column w-100 rounded">
-        <h1 class="important upper fw-bold mt-2">1 AÑO</h1>
-        <p class="text-decoration-line-through text-secondary fs-2 m-1">$2550 MXN</p>
-        <p class="fs-2 m-1"><a class="important">$</a>1500 <a class="important">MXN</a></p>
+<section class="wht-cont d-flex flex-wrap flex-column align-items-center justify-content-center my-5">
+    <div class="section-head d-flex flex-wrap flex-column align-items-center">
+        <h1>MEMBRESÍA PREMIUM</h1>
+        <div class="divider"></div>
+        <h3 class="mt-2 text-uppercase">TU PRIMER MES ES GRATIS CORTESÍA DE <a class="important">BIKERTAG</a></h3>
+    </div>
+    <div class="blk-cont d-flex flex-wrap justify-content-center text-center flex-column p-3 rounded">
+        <h1 class="important text-uppercase fw-bold mt-2">1 AÑO</h1>
+        <h3 class="text-decoration-line-through text-secondary m-1">$2550 MXN</h3><!--Revisar las clases de los precio si funcionan correctamente despues del cambio de tag y la eliminacion de la clase fs-2-->
+        <h3 class="m-1"><a class="important">$</a>1500 <a class="important">MXN</a></h3>
         <div class="divider bg-secondary position-relative"></div>
         <div class="text-start px-5 mt-3">
             <p>- Un sticker con tecnología QR y NFC para el casco.</p>
@@ -284,7 +299,7 @@ style="background-image: linear-gradient(#0009, #0009), url(glen-alejandro-EQ7vo
             <p>- Contacto de emergencia.</p>
             <p>- Doble factor de seguridad.</p>
         </div>
-        <button class="upper m-5">COMENZAR GRATIS</button>
+        <a href="" class="col-10 text-uppercase m-5"><button type="button">COMENZAR GRATIS</button></a>
     </div>
 </section>
 <%- include("partials/_footer-demo.ejs") %>
