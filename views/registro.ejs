@@ -13,9 +13,9 @@
       <div class="d-flex flex-wrap flex-column w-100">
         <label for="password" class="form-label text-white">Contraseña</label><input class="my-2" type="password" name="password" maxlength="20" required="required">
       </div>
-      <div class="d-flex flex-wrap flex-column w-100">
+      <!--<div class="d-flex flex-wrap flex-column w-100">
         <label for="password" class="form-label text-white">Confirmar Contraseña</label><input class="my-2" type="password" name="password-conf" maxlength="20" required="required">
-      </div>
+      </div>-->
     </div>
     <button type="button" class="" data-bs-toggle="collapse" data-bs-target="#full-data" aria-expanded="false" aria-controls="collapseExample">Siguiente</button>
   </div>
@@ -26,7 +26,7 @@
             <p>Para comenzar por favor proporciona tus siguientes datos.</p>
     </div>
     <form class="w-100 d-flex flex-wrap justify-content-center" method="POST" action="/add-user">
-      <div class="col-md-5 mx-2">
+      <div class="col-lg-5 mx-2">
             <div class="d-flex flex-wrap flex-column">
               <label for="full-name" class="form-label text-white col-6">Nombre(s)*</label><input class="my-2" type="text" name="nombre" maxlength="40" required="required">
             </div>
@@ -51,7 +51,7 @@
               <label for="contact-num" class="form-label text-white">Número de Emergencia*</label><input class="my-2" type="text" maxlength="10" name="cont-emer-num" required="required">
             </div>
       </div>
-      <div class="col-md-5 mx-2">
+      <div class="col-lg-5 mx-2">
           <div class="d-flex flex-wrap flex-column">
               <label for="blood-type" class="form-label text-white">Grupo Sanguineo*</label><select class="my-2" type="text" name="grp-sang" required="required">
                 <option value="O+">O+</option>
@@ -78,14 +78,14 @@
           </div>
           <div class="d-flex flex-wrap flex-column">
             <label for="alergias" class="form-label text-white">Alergias*</label>
-            <input class="my-2" type="text" style="display: none;"
-            placeholder="¿Cuántas alergias desea especificar?" maxlength="1" required="required">
+            <!--<input class="my-2" type="text" style="display: none;"
+            placeholder="¿Cuántas alergias desea especificar?" maxlength="1" required="required">-->
             <textarea class="my-2" name="alergias" id="" rows="8" placeholder="(ej. diabetes, miopia, ...)" required></textarea>
           </div>
           <div class="d-flex flex-wrap flex-column">
             <label for="tratamiento" class="form-label text-white">Tratamiento*</label>
-            <input class="my-2" type="text"
-            placeholder="¿A cuántos tratamientos está sometido?" maxlength="1" style="font-size: 20px; display: none;" required="required">
+            <!--<input class="my-2" type="text"
+            placeholder="¿A cuántos tratamientos está sometido?" maxlength="1" style="font-size: 20px; display: none;" required="required">-->
             <textarea class="my-2" name="tratamiento" id="" rows="8" placeholder="(ej. diabetes, miopia, ...)"></textarea>
           </div>
       </div>
