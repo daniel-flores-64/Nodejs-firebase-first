@@ -1,8 +1,16 @@
 const express = require("express");
 const admin = require("firebase-admin");
 const { Timestamp } = require("firebase-admin/firestore");
+const { getAuth, createUserWithEmailAndPassword } = require("firebase/auth");
+
+const auth = getAuth();
 
 const app = express();
+/*Código introducido de video
+/*{
+const cookieParser = require('cookie-parser')
+
+const csrfMiddleware = csrf({cookie:true})
 
 var serviceAccount = require("./serviceAccountKey.json");
 
@@ -10,6 +18,66 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 
+app.engine("html", require("ejs").renderFile);
+app.use(express.static("static"));
+
+app.use(bodyParser.json())
+app.use(cookieParser())
+app.use(csrfMiddleware)
+app.all("*",(req,res,next) => {
+  res.cookie("XSRF-TOKEN",req.csrfToken)
+})
+app.post('/sessionLogin',(req,res,) => {
+  const idToken = req.body.idToken.toString()
+
+  const expiresin = 60*60*24*5*1000
+
+  admin.auth().createSessionCookie(idToken,{expiresIn}).then(
+    (sessionCookie) => {
+      const options = {maxAge:expiresin,httpOnly:true}
+
+      res:cookie("session",sessionCookie,options)
+      res.end(JSON.stringify({status:"success"}))
+    },
+    (error) => {
+      res.status(401).send("UNAUTHORIZED REQUEST")
+      res.redirect('/login')
+    }
+  )
+})
+/*}*/
+
+/*const cookieParser = require("cookie-parser");*/
+const csrf = require("csurf");
+const bodyParser = require("body-parser");
+
+const csrfMiddleware = csrf({ cookie: true });
+
+app.all("*", (req, res, next) => {
+  res.cookie("XSRF-TOKEN", req.csrfToken());
+  next();
+});
+
+app.get("/login", function (req, res) {
+  res.render("login");
+});
+
+
+app.get("/registro", function (req, res) {
+  res.render("registro");
+});
+
+app.get("/profile", function (req, res) {
+  res.render("profile");
+});
+
+app.get("/", function (req, res) {
+  res.render("index");
+});
+
+/**
+ * 
+ */
 const db = admin.firestore();
 
 app.set("view engine", "ejs");
@@ -74,7 +142,7 @@ async function createTask(collectionName, data) {
 }
 
 // List Current Tasks
-app.get("/tasks/:id", async (req, res) => {
+app.get("/tasks/:user-name", async (req, res) => {//Se cambia :id por user-name
   const { id } = req.params;
 
   const data = await readUserTasks("tasks", id);
@@ -91,7 +159,7 @@ async function readUserTasks(collectionName, id) {
 }
 
 // Update Task Status
-app.get("/update-task/:id", async (req, res) => {
+app.get("/update-task/:user-name", async (req, res) => {
   const { id } = req.params;
   const taskToUpdate = {
     status: false,
@@ -178,4 +246,20 @@ app.get("/profile", (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port http://localhost:${PORT}`);
+});
+
+
+
+app.post('/login', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    
+    const userRecord = await admin.auth().getUserByEmail(email);
+    
+  } catch (error) {
+    // Error durante la autenticación
+    console.error('Error de autenticación:', error);
+    res.status(401).send('Error de autenticación');
+  }
 });

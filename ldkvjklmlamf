@@ -1,0 +1,90 @@
+[33mcommit 538cab3d38f67d39b100df0834f643c9dd240607[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Daniel Flores <daniel.flores@dc.indexa.mx>
+Date:   Tue Mar 26 16:35:57 2024 -0600
+
+    Versión funcional con registros
+
+[33mcommit 63ad129ac94a861ee1f203031221d64f9df572d5[m
+Author: Daniel Flores <daniel.flores@dc.indexa.mx>
+Date:   Tue Mar 26 15:22:54 2024 -0600
+
+    Versión antes de configurar el registro de usuarios
+
+[33mcommit 037820d5e83c23b3827236f4d256e0145b3f204c[m
+Author: Daniel Flores <daniel.flores@dc.indexa.mx>
+Date:   Fri Mar 22 10:43:52 2024 -0600
+
+    Integración inicial de la página principal al proyecto
+
+[33mcommit 139dd93f82b40627814055c5fc35d79e02fd5eef[m
+Author: Daniel Flores <daniel.flores@dc.indexa.mx>
+Date:   Thu Mar 14 15:54:31 2024 -0600
+
+    Se añadieron detalles al footer
+
+[33mcommit 09c729e327db1fb433c6341689f9265952cebaa0[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Daniel Flores <daniel.flores@dc.indexa.mx>
+Date:   Thu Mar 14 11:02:53 2024 -0600
+
+    Se implementaron clases de bootstrap
+
+[33mcommit fed2197962602f5e090069946ac34768110b2e1c[m
+Author: Daniel Flores <daniel.flores@dc.indexa.mx>
+Date:   Thu Mar 14 09:28:31 2024 -0600
+
+    Correcciones para el push
+
+[33mcommit c2c9795e49e642a41c7186c922b1a8ca4880eb60[m
+Merge: 03b1f64 2e8d153
+Author: Daniel Flores <daniel.flores@dc.indexa.mx>
+Date:   Wed Mar 13 14:42:15 2024 -0600
+
+    Correcciones
+
+[33mcommit 03b1f64f6215bccb9d1387853db6171a4c93e68d[m
+Author: Daniel Flores <daniel.flores@dc.indexa.mx>
+Date:   Wed Mar 13 14:23:32 2024 -0600
+
+    Versión Final con funciones implementadas e imagenes estándar
+
+[33mcommit ff2cf7c67ffdaab264fc567338538539cded7533[m
+Author: Daniel Flores <daniel.flores@dc.indexa.mx>
+Date:   Tue Mar 12 16:57:07 2024 -0600
+
+    Primer version terminada sin funciones, con imagenes estandar
+
+[33mcommit 2e8d153176fa6da0c7776c2225f1e6ade4ad0707[m
+Author: Daniel Flores <daniel.flores@dc.indexa.mx>
+Date:   Tue Mar 12 16:57:07 2024 -0600
+
+    Se terminaron todas las vistas de los perfiles
+
+[33mcommit 3aa0af1785616b704ad17def4acc1e1cd5a9ac96[m
+Author: Daniel Flores <daniel.flores@uinenlinea.mx>
+Date:   Mon Mar 11 10:43:14 2024 -0600
+
+    Se actualizó la disposición de los colores en el css
+
+[33mcommit f3b4cae50da9542ba1db806d74b037e1c6795e15[m
+Author: Daniel Flores <daniel.flores@uinenlinea.mx>
+Date:   Fri Mar 8 16:56:51 2024 -0600
+
+    Primer Versión de los perfiles
+
+[33mcommit 68e953e9cf1db8c57bbcac4875ec3535c35b0cd9[m
+Author: Daniel Flores <daniel.flores@uinenlinea.mx>
+Date:   Fri Mar 8 11:08:21 2024 -0600
+
+    Se creo la base para los perfiles y la conexión a la base de datos de firebase
+
+[33mcommit 62a98259d221c4e308ce3d8e749bc7ccb539a309[m
+Author: MarcoAntonioSanchez <marco.a.sanchez.dev@gmail.com>
+Date:   Fri Mar 1 11:07:07 2024 -0600
+
+    Base CRUD structure ready with connection to noSQL on firestore DB
+
+[33mcommit 23b766bc8c25d63787edb399beb7e623b3a1dd9e[m
+Author: MarcoAntonioSanchez <marco.a.sanchez.dev@gmail.com>
+Date:   Sun Feb 25 12:25:19 2024 -0600
+
+    0. 1st commit

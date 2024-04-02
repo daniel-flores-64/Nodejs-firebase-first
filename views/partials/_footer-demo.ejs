@@ -37,55 +37,10 @@
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<!--<script>
-const firebaseConfig = {
-
-apiKey: "AIzaSyBcfm6YfGjrxPQTqSOA7LZ7wQhto8GsUqQ",
-
-authDomain: "solid-shelter-415617.firebaseapp.com",
-
-projectId: "solid-shelter-415617",
-
-storageBucket: "solid-shelter-415617.appspot.com",
-
-messagingSenderId: "992420694448",
-
-appId: "1:992420694448:web:84f85d848c5d9b1b8c2e75",
-
-measurementId: "G-G0LL3DKW3M"
-
-};
-
-firebase.initializeApp(firebaseConfig);
-
-firebase.auth().setPersistence(firebase.auth.Auth.Persistence.None)
-
-document.getElementById('registro')
-.addEventListener('click', function(e){
-  const login =event.target.login.value
-  const password =event.target.password.value
-
-firebase.auth().CreateUserWithEmailAndPassword(login,password.then).then(({user}) => {
-  return user.getIdToken().then((idToken) => {
-    return fetch("/login",{
-      method: 'POST',
-      headers:{
-        Accept:'application/json',
-        "Content-Type":"application/json",
-        "CSRF-Token":Cookies.get("XSRF-TOKEN")
-      },
-      body:JSON.stringify({idToken})
-    })
-  })
-})
-.then(() => {
-  return firebase.auth().signOut()
-})
-.then(() => {
-  window.location.assign("/registro")
-})
-})
-</script>-->
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js" defer></script>
+<script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js" defer></script>
+<script src="app.js"></script>
 </body>
 
 </html>

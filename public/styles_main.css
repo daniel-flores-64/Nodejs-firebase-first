@@ -66,6 +66,9 @@ input, select, option, textarea{
     color: var(--primario) !important;
     text-decoration: none;
 }
+.carousel-indicators [data-bs-target]{
+    margin: 30px 3px !important;
+}
 .section-head{
     /*margin-bottom: 30px;*/
     height: 200px;
